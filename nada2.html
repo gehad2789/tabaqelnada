@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Roboto+Slab:wght@100..900&family=Sevillana&family=Yellowtail&display=swap" rel="stylesheet">
+    <title>tabaqelnada2</title>
+    <style>
+        .page{
+            display: flex;
+            flex-direction: column;
+
+        
+        }
+        /*nav*/
+        nav{
+            background-color: white;
+            display: inline-flex;
+            text-align: right;
+        }
+        nav p{
+            position: absolute;
+            right: 30px;
+            color: rgb(226, 150, 51);
+            text-shadow: 1px 1px pink;
+
+        }
+        <!--back img-->
+             
+     
+        .back{
+            position: relative;
+            display: inline-block;
+
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family: "Reddit Mono", monospace;
+
+
+        }
+        .back img{
+            display: block;
+            width: 1500px;
+            height: 500px;
+
+
+        }
+        .backtxt{
+            position: absolute;
+            top: 23%;
+            left: 50%;
+            font-size: xx-large;
+            color:white;
+            left: 120px;
+            bottom: 40px;
+        }
+        .backtxt h2 ,h4{
+            text-shadow: 1px 2px pink ;
+        }
+        .back button{
+            background-color:hotpink;
+            /*border:solid 2px white;*/
+            color:white;
+            width: 230px;
+            height: 34px;
+            border: none;
+            }
+
+            
+
+    /*options */
+       
+        ul ,li{
+            display: inline-block;
+        }
+        .choose{
+            margin-left: 230px;
+            text-align: center;
+            color: #f7dff5;
+            text-shadow: 1px 2px rgb(249, 48, 81);
+
+        }
+        .selct{
+
+           
+            padding-top: 40px;
+            padding: 20px;
+        }
+        .selct select{
+            color: hotpink;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            height: 30px;
+            width: 300px;
+            border: solid 2px pink;
+
+        }
+       
+        
+        .lo{
+            padding-left: 10px;
+            color: hotpink;
+            text-transform: capitalize;
+            text-shadow:   2px 0 2px chocolate;
+            font-weight: bolder;
+            grid-area: logo;
+            font-size: 30px;
+            margin-top: 10px;
+
+
+        }
+        .lo::before{
+            content: "\1F36A";
+        }
+        .choose span{
+            color:white;
+            background-color: pink;
+            border-radius:10px;
+        }
+
+        
+
+
+        /*content of page*/
+        .content{
+            display:flex;
+            justify-items: center;
+            justify-content: space-between;
+        }
+        .cardsproduct{
+
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            position: absolute;
+            left: 70px;
+            text-align: center;
+        }
+        .cardsproduct div{
+            padding-left: 20px;
+            
+        }
+        .cardsproduct div img{
+            height: 270px;
+            width: 270px;
+        }
+    
+     
+        .card-item{
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            list-style: none;
+            border: solid 2px transparent;
+            transition: border .4s ease;
+            width: 300px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            display: flex;
+        }
+        .card-item:hover{
+            border: solid 1px brown;
+        }
+        .cards .card-item img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            height: 300px;
+            width: 300px;
+        }
+         /*responsive cards for cookiesimgs*/
+         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+        *{
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;}
+    
+        .cards span{
+            background: #F7DFF5;
+            font-weight: 600px;
+            padding: 8px ;
+            margin-top: 32px;
+            display: inline-block;
+
+        }
+        .card-item h3 {
+            
+            color: #000;
+           font-size: 1.438rem;
+           margin-top: 28px;
+           font-weight: 600;
+        }
+        .arrow{
+            color: #fff; 
+
+        }
+        .coo{
+            display: inline-flex;
+            padding-top: 40px;
+            width: 500px;
+            height: 100px;
+            justify-content: center;
+            margin-left: 130px;
+            margin-right: 130px;
+        }
+        .coo div{
+            display: flex;
+            justify-content: space-between;
+            margin-right: 40px;
+    
+        }
+
+        .coo img{
+            width: 300px;
+            height: 200px;
+        }
+        .coo2{
+            display: inline-flex;
+            padding-top: 40px;
+        }
+        /**stiky bar*/
+   
+        .foot{
+            background-color: chocolate;
+            grid-area: ffoot;
+            text-align: center;
+            height: 50px;
+            width: 100%;
+            color: white;
+            position: fixed;
+            bottom: 1px;
+
+        }
+        .foot p{
+            font-weight: bolder;
+        
+        }
+        .foot a{
+            color: white;
+
+        }
+        
+       
+
+
+
+
+
+
+        
+
+
+    </style>
+</head>
+<body>
+
+
+    <nav>
+
+        <h2 class="lo">tabaqelnada</h2> 
+        <p>home made cookies | minis </p>
+
+    </nav>
+
+    <div class="back">
+
+        <div>
+            <img src="imge/Strawberry-Shortcake-Cookies_1285.webp"/>
+        </div>
+        <div class="backtxt">
+            <h2> the best cookies to eat </h2>
+            <h4>made with passion</h4>
+            <button>order now </button>
+               
+
+        </div>
+                
+    </div>
+
+    <div class="content">
+        <div class="choose">
+            <h1>find your favorite flavor </h1>
+            <div class="selct">
+                <select class="mains" aria-placeholder="mains">
+                    <option> mains</option>
+                    <option >red velvet cookies </option>
+                    <option>kunder beuno cookies</option>
+                    <option>nutella oreo cookies</option>
+                    <option>nutella stuffed cookies</option>
+                    <option>lotus stuffed cookies</option>
+         
+                </select>
+            
+                <select class="mini" aria-placeholder="mains">
+                    <option> mini </option>
+                    <option > mini minilvet cookies </option>
+                    <option>mini kunder beuno cookies</option>
+                    <option>mini nutella oreo cookies</option>
+                    <option>mini nutella stuffed cookies</option>
+                    <option>mini lotus stuffed cookies</option>
+                            
+                </select>
+            
+                <select class="topings" aria-placeholder="mains">
+                    <option> topings</option>
+                    <option >pistachio </option>
+                    <option>caramel</option>
+                    <option>almond</option>
+                    <option>shredded</option>
+                    <option>coconut</option>
+                            
+                </select>
+        </div>
+
+
+                <!-- responsive card items-->        
+        <div class="cards">
+
+           
+                    </div>
+                    <div class="cardsproduct ">
+                        <div >
+                            <a href=" " class="card-item">
+                                <img src="imge/images.jpg" alt="nu">
+                                <span class="nutella"> nutella cookies</span><!-- responsive card items-->
+                                <div class="arrow">
+                                <i class="fas fa-arrow-right card-icon"></i>
+                                    
+                                </div>
+                            </a>  
+            
+                        </div> 
+            
+                        <div>
+                            
+                        <a href="#" class="card-item">
+                            <img src="imge/lotuscookue.jpg"alt="lo">
+                            <span class="lotus"> lotus cookies</span><!-- responsive card items-->
+                            <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                                    
+                            </div>
+                        </a>  
+            
+                        </div>
+            
+                        <div>
+                            
+                        <a href="#" class="card-item">
+                            <img src="imge/redvelvcookie.jpg" alt="red">
+                            <span class="lotus"> lotus cookies</span><!-- responsive card items-->
+                            <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                            </div>
+                        </a>  
+            
+                        </div>
+            
+            
+                        <div>
+                            <a href="#" class="card-item">
+                                <img src="imge/Oreo-Nutella-Cookies-by-Lauren-Foster-410x273.jpg" alt=" ore">
+                                <span class="oreo"> oreo cookies</span><!-- responsive card items-->
+                                <div class="arrow">
+                                <i class="fas fa-arrow-right card-icon"></i>
+                                </div>
+                            </a>    
+            
+                        </section>
+        
+                    </div>
+        
+        
+        
+        
+        
+                </div>     
+        
+    </div>
+
+
+
+   
+
+    
+
+        
+
+
+
+        <!--<aside>sidebar</aside>-->
+        <div class="foot">
+             <p>to order our cookies contact us via our emai:<a href="  nadamuhammed1911@gmail.com">
+                nadamuharmmed1@gmail.com
+             </a>
+           or via our phone number:</p>
+
+        </div>
+    </div>  
+    <footer>  </footer>  
+
+    </div>
+    
+    
+    
+</body>
+</html>
